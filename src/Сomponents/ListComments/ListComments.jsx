@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
+import Pagination from '../Pagination';
 
 function dateformat(date) {
   const data = new Date(date);
@@ -38,7 +39,7 @@ export default function ListComments() {
     indexOfLastComment
   );
   console.log(currentComments);
-  const loadPage = () => setCurrentPage(+currentPage + 1);
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div className='CommentsWrapper'>
@@ -62,6 +63,11 @@ export default function ListComments() {
       >
         load more
       </Button>
+      <Pagination
+        commentsPerPage={commentsPerPage}
+        totalComments={comment.length}
+        paginate={paginate}
+      />
     </div>
   );
 }
