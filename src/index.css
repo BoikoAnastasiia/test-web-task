@@ -45,18 +45,16 @@ h1 {
 }
 
 .formCommentsWrapper button {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .formCommentsWrapper textarea::placeholder {
   font-family: 'Lato';
 }
 
-
 ul {
   list-style: none;
 }
-
 
 li {
   border: #ff9966 1px solid;
@@ -66,7 +64,7 @@ li {
 }
 
 .name {
-color: #15c087;
+  color: #15c087;
 }
 
 .data {
