@@ -17,17 +17,15 @@ function dateformat(date) {
 export default function ListComments() {
   const [comment, setComment] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+
   const [commentsPerPage] = useState(10);
 
   useEffect(() => {
     const fetchComments = async () => {
-      setLoading(true);
       const res = await axios.get(
         `https://jordan.ashton.fashion/api/goods/30/comments`
       );
       setComment(res.data);
-      setLoading(false);
     };
     fetchComments();
   }, []);
@@ -46,7 +44,7 @@ export default function ListComments() {
       <h1>Comments</h1>
 
       <ul>
-        {!loading &&
+        {currentComments &&
           currentComments.map(({ name, text, created_at, id }) => (
             <li key={id}>
               <h2 className='name'>{name}</h2>
@@ -56,7 +54,7 @@ export default function ListComments() {
           ))}
       </ul>
       <Button
-        onClick={loadPage}
+        onClick={null}
         variant='contained'
         color='secondary'
         style={{ margin: '60px auto 10px auto', display: 'block' }}
