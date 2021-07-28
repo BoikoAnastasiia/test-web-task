@@ -11,22 +11,23 @@ export default function ListComments() {
       .then(json => setComment(json));
   }, [page]);
 
-  const loadPage = () => setPage(page + 1);
-
+  const loadPage = () => setPage(+page + 1);
+  console.log(comment);
+  
   return (
     <div className="CommentsWrapper">
       <h1>Comments</h1>
 
       <pre> {JSON.stringify(comment.data)} </pre>
-      <ul>
-        {/* {JSON.stringify(comment.data).map(({ name, text, created_at, id }) => (
+      {/* <ul>
+        {comment.data.map(({ name, text, created_at, id }) => (
           <li key={id}>
             <h2>{name}</h2>
             <p>{text}</p>
             <p>{created_at}</p>
           </li>
-        ))} */}
-      </ul>
+        ))}
+      </ul> */}
       <Button
         onClick={loadPage}
         variant="contained"
