@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
+import axios from 'axios'
 
 function dateformat(date) {
   const data = new Date(date)
@@ -10,9 +11,12 @@ function dateformat(date) {
 
 export default function ListComments() {
   const [comment, setComment] = useState([]);
-  const [page, setPage] = useState([1]);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false)
+  const [commentsPerPage, setCommentsPerPage]=useState(10)
 
   useEffect(() => {
+    const fetchComments = async ()=>
     fetch(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
       .then(res => res.json())
       .then(json => setComment(json));

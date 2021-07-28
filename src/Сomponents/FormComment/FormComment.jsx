@@ -6,7 +6,7 @@ import ArrowForwardIosSharpIcon from '@material-ui/icons/ArrowForwardIosSharp';
 
 const validationSchema = yup.object({
   name: yup.string().required('Заполните все поля'),
-  comment: yup.string().required('Заполните все поля'),
+  text: yup.string().required('Заполните все поля'),
 });
 
 export default function FormComments() {
@@ -17,7 +17,7 @@ export default function FormComments() {
         validationSchema={validationSchema}
         initialValues={{
           name: '',
-          comment: '',
+          text: '',
         }}
         onSubmit={async (values, { resetForm }) => {
           fetch('https://jordan.ashton.fashion/api/goods/30/comments', {
@@ -45,9 +45,9 @@ export default function FormComments() {
             <TextareaAutosize
               aria-label='empty textarea'
               onChange={handleChange}
-              name='comment'
+              name='text'
               placeholder='Комментарий'
-              value={values.comment}
+              value={values.text}
               style={{
                 outline: 'none',
                 border: '1px rgba(245, 0, 87, 0.5) solid',
