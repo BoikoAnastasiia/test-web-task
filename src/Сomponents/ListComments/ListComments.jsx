@@ -26,6 +26,7 @@ export default function ListComments() {
   const [comment, setComment] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [commentsPerPage] = useState(5);
+  const [allPages, setAllPages] = useState(1);
 
   useEffect(() => {
     const getComments = () => {
@@ -37,6 +38,17 @@ export default function ListComments() {
     };
     getComments();
   }, [currentPage]);
+
+  useEffect(() => {
+    const allCommentsData = () => {
+      return axios
+        .get(`https://jordan.ashton.fashion/api/goods/30/comments`)
+        .then(res => setAllPages(res.data.total));
+    };
+    allCommentsData();
+  }, []);
+
+  console.log(allPages);
 
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfTheFirstComment = indexOfLastComment - commentsPerPage;
