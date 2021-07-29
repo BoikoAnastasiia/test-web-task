@@ -16,7 +16,7 @@ export default function Pagination({
           <Button
             color='primary'
             variant='outlined'
-            onClick={() => paginate(number)}
+            onClick={e => paginate(e.target.textContent)}
           >
             {number}
           </Button>

@@ -79,6 +79,7 @@ li {
   justify-content: center;
   margin: 20px 0 0 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .paginationWrapper li {

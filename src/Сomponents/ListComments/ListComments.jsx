@@ -14,10 +14,10 @@ function dateformat(date) {
   return data.toLocaleString('ru', options);
 }
 
-const fetchComments = ({ currentPage = 1, pageSize = 5 } = {}) => {
+const fetchComments = ({ currentPage = 1 }) => {
   return axios
     .get(
-      `https://jordan.ashton.fashion/api/goods/30/comments?per_page=${pageSize}?page=${currentPage}`
+      `https://jordan.ashton.fashion/api/goods/30/comments?page=${currentPage}`
     )
     .then(response => response.data.data);
 };
@@ -48,19 +48,17 @@ export default function ListComments() {
     allCommentsData();
   }, []);
 
-  console.log(allPages);
-
+  console.log(comment);
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfTheFirstComment = indexOfLastComment - commentsPerPage;
   const currentComments = comment.slice(
     indexOfTheFirstComment,
     indexOfLastComment
   );
-  console.log(currentComments);
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   const updatePage = () => {
-    setCurrentPage(prevPage => prevPage + 1);
+    setCurrentPage(prevPage => +prevPage + 1);
   };
 
   return (
@@ -68,8 +66,8 @@ export default function ListComments() {
       <h1>Comments</h1>
 
       <ul>
-        {currentComments &&
-          currentComments.map(({ name, text, created_at, id }) => (
+        {comment &&
+          comment.map(({ name, text, created_at, id }) => (
             <li key={id}>
               <h2 className='name'>{name}</h2>
               <p className='message'>{text}</p>
@@ -87,7 +85,7 @@ export default function ListComments() {
       </Button>
       <Pagination
         commentsPerPage={commentsPerPage}
-        totalComments={comment.length}
+        totalComments={allPages}
         paginate={paginate}
       />
     </div>
