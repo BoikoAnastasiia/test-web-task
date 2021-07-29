@@ -9,9 +9,8 @@ export default function Pagination({
   for (let i = 1; i <= Math.ceil(totalComments / commentsPerPage); i++) {
     pageNumbers.push(i);
   }
-
   return (
-    <ul>
+    <ul className='paginationWrapper'>
       {pageNumbers.map(number => (
         <li key={number}>
           <Button

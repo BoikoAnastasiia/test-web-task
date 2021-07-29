@@ -72,3 +72,19 @@ li {
   font-size: 10px;
   color: gray;
 }
+
+.paginationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.paginationWrapper li {
+  border: solid 1px rgb(212, 132, 177);
+}
+
+.paginationWrapper li:not(:last-child) {
+  margin-right: 15px;
+}

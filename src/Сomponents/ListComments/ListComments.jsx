@@ -40,7 +40,7 @@ export default function ListComments() {
 
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfTheFirstComment = indexOfLastComment - commentsPerPage;
-  const currentComments = comment?.slice(
+  const currentComments = comment.slice(
     indexOfTheFirstComment,
     indexOfLastComment
   );
