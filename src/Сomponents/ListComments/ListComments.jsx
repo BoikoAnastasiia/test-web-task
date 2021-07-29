@@ -14,7 +14,7 @@ function dateformat(date) {
   return data.toLocaleString('ru', options);
 }
 
-const fetchComments = ({ currentPage = 1, pageSize = 8 } = {}) => {
+const fetchComments = ({ currentPage = 1, pageSize = 5 } = {}) => {
   return axios
     .get(
       `https://jordan.ashton.fashion/api/goods/30/comments?per_page=${pageSize}?page=${currentPage}`
@@ -25,7 +25,7 @@ const fetchComments = ({ currentPage = 1, pageSize = 8 } = {}) => {
 export default function ListComments() {
   const [comment, setComment] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [commentsPerPage] = useState(8);
+  const [commentsPerPage] = useState(5);
 
   useEffect(() => {
     const getComments = () => {
