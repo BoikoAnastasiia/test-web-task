@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/BoikoAnastasiia.github.io/test-web-task/static/css/main.247ecfc0.chunk.css",
-    "main.js": "/BoikoAnastasiia.github.io/test-web-task/static/js/main.fe0fe0d5.chunk.js",
-    "main.js.map": "/BoikoAnastasiia.github.io/test-web-task/static/js/main.fe0fe0d5.chunk.js.map",
-    "runtime-main.js": "/BoikoAnastasiia.github.io/test-web-task/static/js/runtime-main.823d000b.js",
-    "runtime-main.js.map": "/BoikoAnastasiia.github.io/test-web-task/static/js/runtime-main.823d000b.js.map",
-    "static/js/2.e7b73f0c.chunk.js": "/BoikoAnastasiia.github.io/test-web-task/static/js/2.e7b73f0c.chunk.js",
-    "static/js/2.e7b73f0c.chunk.js.map": "/BoikoAnastasiia.github.io/test-web-task/static/js/2.e7b73f0c.chunk.js.map",
-    "static/js/3.91dd38a4.chunk.js": "/BoikoAnastasiia.github.io/test-web-task/static/js/3.91dd38a4.chunk.js",
-    "static/js/3.91dd38a4.chunk.js.map": "/BoikoAnastasiia.github.io/test-web-task/static/js/3.91dd38a4.chunk.js.map",
-    "index.html": "/BoikoAnastasiia.github.io/test-web-task/index.html",
-    "static/css/main.247ecfc0.chunk.css.map": "/BoikoAnastasiia.github.io/test-web-task/static/css/main.247ecfc0.chunk.css.map",
-    "static/js/2.e7b73f0c.chunk.js.LICENSE.txt": "/BoikoAnastasiia.github.io/test-web-task/static/js/2.e7b73f0c.chunk.js.LICENSE.txt"
+    "main.css": "/test-web-task/static/css/main.0723e244.chunk.css",
+    "main.js": "/test-web-task/static/js/main.8dca1a8f.chunk.js",
+    "main.js.map": "/test-web-task/static/js/main.8dca1a8f.chunk.js.map",
+    "runtime-main.js": "/test-web-task/static/js/runtime-main.df04fce8.js",
+    "runtime-main.js.map": "/test-web-task/static/js/runtime-main.df04fce8.js.map",
+    "static/js/2.590d3087.chunk.js": "/test-web-task/static/js/2.590d3087.chunk.js",
+    "static/js/2.590d3087.chunk.js.map": "/test-web-task/static/js/2.590d3087.chunk.js.map",
+    "static/js/3.3a36be51.chunk.js": "/test-web-task/static/js/3.3a36be51.chunk.js",
+    "static/js/3.3a36be51.chunk.js.map": "/test-web-task/static/js/3.3a36be51.chunk.js.map",
+    "index.html": "/test-web-task/index.html",
+    "static/css/main.0723e244.chunk.css.map": "/test-web-task/static/css/main.0723e244.chunk.css.map",
+    "static/js/2.590d3087.chunk.js.LICENSE.txt": "/test-web-task/static/js/2.590d3087.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.823d000b.js",
-    "static/js/2.e7b73f0c.chunk.js",
-    "static/css/main.247ecfc0.chunk.css",
-    "static/js/main.fe0fe0d5.chunk.js"
+    "static/js/runtime-main.df04fce8.js",
+    "static/js/2.590d3087.chunk.js",
+    "static/css/main.0723e244.chunk.css",
+    "static/js/main.8dca1a8f.chunk.js"
   ]
 }
